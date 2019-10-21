@@ -63,7 +63,7 @@
     <setupTask
         xsi:type="setup:EclipseIniTask"
         option="-Doomph.redirection.palladio_projects_${scope.project.name}"
-        value="=index:/projects/${scope.project.label}.setup->../../git/Palladio-Bench-Oomph/setups/plain/projects/${scope.project.label}.setup"
+        value="=index:/projects/${scope.project.label}.setup->https://updatesite.palladio-simulator.com/palladio-bench-oomph/nightly/plain/setups/projects/${scope.project.label}.setup"
         vm="true"/>
     <description></description>
   </setupTask>

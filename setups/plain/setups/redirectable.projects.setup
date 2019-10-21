@@ -245,6 +245,6 @@
       <substitution>${workspace.location|path}</substitution>
     </modification>
   </setupTask>
-  <project href="https://updatesite.palladio-simulator.com/palladio-bench-oomph/plain/setups/projects/Palladio-Analyzer-SimuLizar.setup#/"/>
+  <project href="https://updatesite.palladio-simulator.com/palladio-bench-oomph/nightly/plain/setups/projects/Palladio-Analyzer-SimuLizar.setup#/"/>
   <description>All the projects of PalladioSimulator.org (github.com/PalladioSimulator)</description>
 </setup:ProjectCatalog>

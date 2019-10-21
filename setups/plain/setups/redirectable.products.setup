@@ -23,12 +23,12 @@
     <setupTask
         xsi:type="setup:EclipseIniTask"
         option="-Doomph.redirection.palladio_projects"
-        value="=index:/redirectable.projects.setup->https://updatesite.palladio-simulator.com/palladio-bench-oomph/plain/setups/redirectable.projects.setup"
+        value="=index:/redirectable.projects.setup->https://updatesite.palladio-simulator.com/palladio-bench-oomph/nightly/plain/setups/redirectable.projects.setup"
         vm="true"/>
     <setupTask
         xsi:type="setup:EclipseIniTask"
         option="-Doomph.redirection.palladio_products"
-        value="=index:/redirectable.products.setup->https://updatesite.palladio-simulator.com/palladio-bench-oomph/plain/setups/redirectable.products.setup"
+        value="=index:/redirectable.products.setup->https://updatesite.palladio-simulator.com/palladio-bench-oomph/nightly/plain/setups/redirectable.products.setup"
         vm="true"/>
   </setupTask>
   <product name="bench.product"

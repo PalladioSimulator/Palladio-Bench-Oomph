@@ -17,6 +17,20 @@
     <repository
         url="${oomph.update.url}"/>
   </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="Eclipse.ini Settings">
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
+        option="-Doomph.redirection.palladio_projects"
+        value="=index:/redirectable.projects.setup->https://updatesite.palladio-simulator.com/palladio-bench-oomph/plain/setups/redirectable.projects.setup"
+        vm="true"/>
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
+        option="-Doomph.redirection.palladio_products"
+        value="=index:/redirectable.products.setup->https://updatesite.palladio-simulator.com/palladio-bench-oomph/plain/setups/redirectable.products.setup"
+        vm="true"/>
+  </setupTask>
   <product name="bench.product"
       label="Palladio Bench">
     <annotation
@@ -117,6 +131,17 @@
             name="org.eclipse.uml2.sdk.feature.group"/>
         <requirement
             name="org.eclipse.xsd.sdk.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/technology/epp/packages/2019-09"/>
+        <repository
+            url="http://download.eclipse.org/releases/2019-09/201909181001">
+          <annotation
+              source="http://www.eclipse.org/oomph/setup/ReleaseTrain"/>
+        </repository>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Palladio Bench Nightly">
         <requirement
             name="org.palladiosimulator.editors.commons.feature.feature.group"/>
         <requirement
@@ -147,13 +172,6 @@
             name="org.palladiosimulator.branding.feature.feature.group"/>
         <requirement
             name="org.palladiosimulator.supporting.workarounds.epackageinit.feature.feature.group"/>
-        <repository
-            url="http://download.eclipse.org/technology/epp/packages/2019-09"/>
-        <repository
-            url="http://download.eclipse.org/releases/2019-09/201909181001">
-          <annotation
-              source="http://www.eclipse.org/oomph/setup/ReleaseTrain"/>
-        </repository>
         <repository
             url="https://updatesite.palladio-simulator.com/palladio-build-updatesite/nightly/"/>
       </setupTask>

@@ -246,7 +246,7 @@
         </modification>
     </setupTask>
     <% repositories.each {
-        out << "<project href=\"https://updatesite.palladio-simulator.com/palladio-bench-oomph/nightly/plain/setups/projects/${it.name}.setup#/\"/>\n    "
+        out << "<project href=\"${it}#/\"/>\n    "
     }%>
     <description>All the projects of PalladioSimulator.org (github.com/PalladioSimulator)</description>
 </setup:ProjectCatalog>

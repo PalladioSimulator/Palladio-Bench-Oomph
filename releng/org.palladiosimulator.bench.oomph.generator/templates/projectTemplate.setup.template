@@ -105,7 +105,10 @@
         <targlet
                 name="${scope.project.label}"
                 activeRepositoryList="Updatesites">
-
+            <% p2dependencies.units.each {
+            out << "<requirement name=\"$it\"/>\n            "
+            }%>
+            
             <requirement name="*"
                          optional="true"/>
             <sourceLocator

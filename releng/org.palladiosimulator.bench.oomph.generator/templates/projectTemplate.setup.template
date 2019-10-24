@@ -106,7 +106,8 @@
                 name="${scope.project.label}"
                 activeRepositoryList="Updatesites">
 
-            <requirement name="*"/>
+            <requirement name="*"
+                         optional="true"/>
             <sourceLocator
                     rootFolder="${git.clone.location}"
                     locateNestedProjects="true"/>

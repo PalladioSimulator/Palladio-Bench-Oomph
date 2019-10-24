@@ -110,7 +110,7 @@
                          optional="true"/>
             <sourceLocator
                     rootFolder="${git.clone.location}"
-                    locateNestedProjects="true"/>
+                    locateNestedProjects="false"/>
             <repositoryList
                     name="Updatesites">
                 <% p2dependencies.sites.each {

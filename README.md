@@ -27,3 +27,5 @@ In order to set-up your Palladio IDE using Eclipse Installer you need to excerci
 If your project has been set-up using these instructions you can simply add new Palladio Projects to your workspace using the _Import Projects_ wizard. Simply click File->Import->Oomph/Projects into Workspace and select the desired project from the PalladioSimulator.org catalog.
 
 If the IDE was not set up using the Eclipse Installer make sure to install the Oomph extension (installed by default on the standard IDE flavors of Eclipse 2019-06) and add the parameters above to the eclipse.ini file of your IDE. Thereafter, you can simply use the import wizard to add projects to your workspace.
+
+## TODO: Add documentation about the generation and project setup customization process

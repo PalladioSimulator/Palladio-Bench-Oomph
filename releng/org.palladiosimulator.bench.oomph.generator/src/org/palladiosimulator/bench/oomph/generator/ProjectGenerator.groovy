@@ -1,4 +1,7 @@
 package org.palladiosimulator.bench.oomph.generator
+
+import org.palladiosimulator.maven.tychotprefresh.tp.parser.TargetPlatformParser
+
 import static org.palladiosimulator.bench.oomph.generator.GenerationUtils.writeToFile
 import static org.palladiosimulator.bench.oomph.generator.GenerationUtils.loadTemplate
 
@@ -15,7 +18,15 @@ class ProjectGenerator {
         }.path
     }
 
-    protected List determineDependencies(String targetPlatformURL) {
-        []
+    protected Map determineDependencies(String targetPlatformURL) {
+        File tf = File.createTempFile("targetplatform", ".tmp.target")
+        tf << new URL(targetPlatformURL).getText()
+        TargetPlatformParser.parse(tf).map {
+            def filteredLocations = it.locations.findAll { it.filter ? it.filter == "nightly" : true }
+            [sites: filteredLocations.collect { it.repositoryLocation },
+             units: filteredLocations.collectMany {
+                 it.units.collect { it.id }
+             }]
+        }.orElse([:])
     }
 }

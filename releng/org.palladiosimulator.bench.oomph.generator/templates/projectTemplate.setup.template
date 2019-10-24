@@ -105,9 +105,7 @@
         <targlet
                 name="${scope.project.label}"
                 activeRepositoryList="Updatesites">
-            <% p2dependencies.units.each {
-                out << "<requirement name=\"$it\"/>\n            "
-            }%>
+
             <requirement name="*"/>
             <sourceLocator
                     rootFolder="${git.clone.location}"
@@ -117,6 +115,7 @@
                 <% p2dependencies.sites.each {
                 out << "<repository url=\"$it\"/>\n                "
                 }%>
+                <repository url="https://updatesite.palladio-simulator.com/palladio-supporting-branding/releases/2.1.0/"/>
                 <repository url="https://download.eclipse.org/tools/orbit/downloads/drops/R20190827152740/repository/"/>
                 <repository url="https://updatesite.mdsd.tools/ecore-workflow/releases/0.1.0/"/>
                 <repository url="https://download.eclipse.org/releases/2019-09/"/>

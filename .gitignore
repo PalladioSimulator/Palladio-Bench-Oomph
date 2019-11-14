@@ -25,3 +25,6 @@ hs_err_pid*
 setups/plain/*
 *.iml
 .idea
+
+# Folders
+target/

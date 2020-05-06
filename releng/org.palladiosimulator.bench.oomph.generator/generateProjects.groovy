@@ -11,8 +11,8 @@ def templateFolderName
 def githubAuthToken*/
 
 def projects = fetch("https://api.github.com/orgs/PalladioSimulator/repos?per_page=100").name.unique(false).collect{it.toString()}.sort()
-def projectSetupFiles = fetch("https://api.github.com/search/code?q=extension:setup+org:PalladioSimulator+path:releng").items
-def projectTargetPlatforms = fetch("https://api.github.com/search/code?q=extension:target+org:PalladioSimulator+path:releng").items
+def projectSetupFiles = fetch("https://api.github.com/search/code?q=extension:setup+org:PalladioSimulator+path:releng?per_page=100").items
+def projectTargetPlatforms = fetch("https://api.github.com/search/code?q=extension:target+org:PalladioSimulator+path:releng?per_page=100").items
 def projectsWithoutSetupFile = projects - projectSetupFiles.repository.name.unique(false).collect{it.toString()}.sort()
 
 def projectGenerator = new ProjectGenerator(outputFolderName: "$outputFolderName/projects", templateFolder: new File(templateFolderName))

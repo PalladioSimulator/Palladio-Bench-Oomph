@@ -1,3 +1,5 @@
+# This repository is DEPRECATED as it can not be built anymore with the current state of this project
+
 # Palladio-Bench-Oomph
 This repository contains the template and the workflow to generate the Setup definition to be used by Eclipse Installer.
 
